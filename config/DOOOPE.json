@@ -1,6 +1,6 @@
 {
   "layouts": {
-    "default": {
+    "LAYOUT": {
       "layout": [
         { "label":    "W", "row": 0, "col":  2, "x":    2, "y": 0.65 },
         { "label":    "E", "row": 0, "col":  3, "x":    3, "y":    0 },
