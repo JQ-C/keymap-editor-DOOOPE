@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-/ 
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
