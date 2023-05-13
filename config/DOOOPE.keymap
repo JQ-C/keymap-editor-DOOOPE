@@ -7,13 +7,30 @@
 #define NUM   1
 #define FUNC  2
 
-//DEFINE THE TAPPING TIME FOR MODTAP
-&mt {
+
+
+//HOLD TAP
+/ {
+    &mt {
     tapping-term-ms = <400>;
 };
 
-//COMBOS 
-/ {
+&sk {
+    ignore-modifiers;
+};
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_tab {
@@ -28,30 +45,7 @@
             bindings = <&kp LC(BSPC)>;
         };
     };
-};
 
-&sk {
-    ignore-modifiers;
-};
-
-
-//HOLD TAP
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-};
-
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,3 +92,6 @@
         };
     };
 };
+
+
+
