@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// dt-formatter: indent = "  "
+// dt-formatter: reindentMultilineIntegerCells = "dedent"
 
 / {
     behaviors {
